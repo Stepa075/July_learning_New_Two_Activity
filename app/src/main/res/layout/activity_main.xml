@@ -8,6 +8,16 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/false_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_btn"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="150dp"
+        android:layout_toEndOf="@+id/true_answer"
+        android:text="False Answer" />
+
+    <TextView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,13 +62,23 @@
     <TextView
         android:id="@+id/example_info"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="63dp"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="21dp"
-        android:background="#63ECD0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
         android:fontFamily="@font/montserrat_bold"
         android:textAlignment="center"
         android:textColor="@color/textColorHint"
         android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/true_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_btn"
+        android:layout_marginTop="150dp"
+        android:text="True Answer" />
 
 </RelativeLayout>
