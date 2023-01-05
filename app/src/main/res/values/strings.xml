@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Math examples</string>
     <string name="logo">Старайся решить правильно!</string>
-    <string name="hint_user_field">Введите город</string>
+    <string name="hint_user_field">Введите ответ здесь</string>
     <string name="main_btn">Ввести ответ</string>
     <string name="no_user_input">Введите ответ на задачу</string>
 </resources>
