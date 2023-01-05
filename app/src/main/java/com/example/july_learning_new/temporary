@@ -1,0 +1,12 @@
+private var number:Int = 6
+    private var number2:Int = 16
+    private var tvText: TextView? = null
+    private var text: String = "in magazine <left> 123 apple"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        tvText = findViewById(R.id.tvText)
+        var subtext:String = text.substringAfter('<')
+        var subtext2:String = subtext.substringBefore('>')
+        tvText?.setText(subtext2)
