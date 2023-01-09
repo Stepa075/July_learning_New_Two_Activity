@@ -1,16 +1,19 @@
 package com.example.july_learning_new
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
 
+class MainActivity : AppCompatActivity() {
+    private var layout: RelativeLayout? = null
     private var example: TextView? = null
     private var true_costs: TextView? = null
     private var false_costs: TextView? = null
@@ -26,10 +29,11 @@ class MainActivity : AppCompatActivity() {
     private var znak1 = ""
     private var znak2 = ""
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        layout = findViewById(R.id.general_layout)
         main_btn = findViewById(R.id.main_btn)
         example = findViewById(R.id.example_info)
         true_costs = findViewById(R.id.true_coast)
@@ -60,26 +64,29 @@ class MainActivity : AppCompatActivity() {
 
     private fun trueOrFalse(value: String){
                 if(value == true_answer){
+                    blinkgGreen()
                     true_cos++
                     true_costs?.setText(true_cos.toString())
+                    user_answer?.setText("")
         }
         else{
+            blinkgRed()
             false_cos++
             false_costs?.setText(false_cos.toString())
-
+            user_answer?.setText("")
         }
         run_generate()
     }
 
     private fun change_primer() {
-        var array = emptyArray<Int>()
+
         while(true){
 
             val random = Random()
-            var chislo1: Int = random.nextInt(100)
-            var chislo2: Int = random.nextInt(100)
-            var chislo3: Int = random.nextInt(100)
-            var variant: Int = random.nextInt(3)
+            var chislo1: Int = (1..100).random()//random.nextInt(100)
+            var chislo2: Int = (1..100).random()
+            var chislo3: Int = (1..100).random()
+            var variant: Int = random.nextInt(4)
             var otvet: Int = 0
             if(variant ==0){otvet = chislo1+chislo2+chislo3; znak1 = "+"; znak2 = "+"}
             if(variant ==1){otvet = chislo1+chislo2-chislo3; znak1 = "+"; znak2 = "-"}
@@ -95,5 +102,40 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        }
+    }
+    fun blinkgRed() {
+        Thread {
+            layout?.setBackgroundColor(Color.RED)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.RED)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.RED)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+
+        }.start()
+    }
+
+    fun blinkgGreen() {
+        Thread {
+            layout?.setBackgroundColor(Color.GREEN)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GREEN)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GREEN)
+            Thread.sleep(100)
+            layout?.setBackgroundColor(Color.GRAY)
+
+        }.start()
+    }
 }
+
+
