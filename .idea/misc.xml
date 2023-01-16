@@ -5,14 +5,19 @@
       <map>
         <entry key="..\:/july_learning_New/app/src/main/res/drawable-ldltr/kruglie_ugli.xml" value="0.1945" />
         <entry key="..\:/july_learning_New/app/src/main/res/drawable/kruglie_ugli.xml" value="0.1" />
+        <entry key="..\:/july_learning_New/app/src/main/res/drawable/rounded_false.xml" value="0.1945" />
+        <entry key="..\:/july_learning_New/app/src/main/res/drawable/rounded_true.xml" value="0.1945" />
         <entry key="..\:/july_learning_New/app/src/main/res/drawable/shape_edit_text.xml" value="0.1945" />
         <entry key="..\:/july_learning_New/app/src/main/res/layout/activity_main.xml" value="0.3484708063021316" />
         <entry key="..\:/july_learning_New/app/src/main/res/layout/kruglie_ugli.xml" value="0.1" />
+        <entry key="..\:/july_learning_New_Copy/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/july_learning_New_Copy/app/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/july_learning_New_Copy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1945" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

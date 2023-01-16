@@ -1,13 +1,11 @@
 package com.example.july_learning_new
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RelativeLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.util.Log
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -29,18 +27,27 @@ class MainActivity : AppCompatActivity() {
     private var znak1 = ""
     private var znak2 = ""
 
+   private var two_btn: Button? = null
+    val LOG_TAG = "myLogs"
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         layout = findViewById(R.id.general_layout)
         main_btn = findViewById(R.id.main_btn)
         example = findViewById(R.id.example_info)
         true_costs = findViewById(R.id.true_coast)
         false_costs = findViewById(R.id.false_coast)
         user_answer = findViewById(R.id.user_field)
-
+        two_btn = findViewById(R.id.button2)
         run_generate()
+        two_btn?.setOnClickListener {
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+
         main_btn?.setOnClickListener {
             if (user_answer?.text?.toString()?.trim()?.equals("")!!) {
                 Toast.makeText(this, "Введите число", Toast.LENGTH_LONG).show()

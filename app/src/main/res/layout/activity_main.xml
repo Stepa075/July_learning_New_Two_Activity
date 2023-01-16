@@ -121,4 +121,15 @@
         android:background="@drawable/rounded_true"
         android:textAlignment="center" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/sec_activ" />
+
 </RelativeLayout>
